@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيع واشري | المارشي تاع التكنولوجيا ولي جو</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#06B6D4',
+                        accent: '#F97316',
+                        background: '#F8FAFC',
+                        darkText: '#111827',
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F8FAFC; color: #111827; }
+        .smooth-hover { transition: all 0.3s ease; }
+        .hide-scroll::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <span class="text-3xl text-primary font-bold"><i class="fa-solid fa-microchip me-2"></i>بيع<span class="text-accent">و</span>اشري</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#" class="text-darkText hover:text-primary font-medium smooth-hover">الرئيسية</a>
+                    <a href="#categories" class="text-gray-500 hover:text-primary font-medium smooth-hover">الأقسام</a>
+                    <a href="#services" class="text-gray-500 hover:text-primary font-medium smooth-hover">الخدمات</a>
+                    <a href="#" class="text-gray-500 hover:text-primary font-medium smooth-hover">شكون حنا</a>
+                    <a href="#" class="text-gray-500 hover:text-primary font-medium smooth-hover">اتصل بينا</a>
+                </nav>
+
+                <!-- Search & Actions -->
+                <div class="hidden md:flex items-center space-x-4 space-x-reverse">
+                    <div class="relative">
+                        <input type="text" placeholder="حوس على بياس، سيرفيس..." class="bg-gray-100 text-sm rounded-full pe-10 ps-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary w-64 smooth-hover">
+                        <i class="fa-solid fa-search absolute start-3 top-2.5 text-gray-400"></i>
+                    </div>
+                    <a href="#" class="text-gray-600 hover:text-primary"><i class="fa-solid fa-heart text-xl"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-primary font-medium">دخول</a>
+                    <a href="#" class="bg-accent text-white px-5 py-2 rounded-full font-medium hover:bg-orange-600 smooth-hover shadow-md">حط إعلان</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+        <div class="bg-gradient-to-l from-primary to-secondary rounded-3xl overflow-hidden shadow-soft flex flex-col md:flex-row relative">
+            <div class="md:w-1/2 p-10 md:p-16 z-10 flex flex-col justify-center">
+                <span class="text-secondary font-bold tracking-wider uppercase mb-2 text-sm bg-white/20 inline-block px-3 py-1 rounded-full w-max">أول مارشي للتكنولوجيا</span>
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">بيع، اشري واكتشف عالم التكنولوجيا ولي جو (Gaming)</h1>
+                <p class="text-white/90 text-lg mb-8 max-w-md">الموقع الموثوق تاعك للميكروات، لي كونسول، بياس بيسي، وخدمات التصليح الاحترافية.</p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <button class="bg-accent hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg smooth-hover">شوف السلعة</button>
+                    <button class="bg-white hover:bg-gray-50 text-primary font-bold py-3 px-8 rounded-full shadow-lg smooth-hover">حط إعلانك</button>
+                </div>
+            </div>
+            <!-- Abstract Hero Pattern/Image Placeholder -->
+            <div class="md:w-1/2 relative min-h-[300px] md:min-h-full opacity-20 md:opacity-100 flex items-center justify-center p-8">
+                <div class="absolute inset-0 bg-primary/20 mix-blend-multiply rounded-s-3xl"></div>
+                <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gaming Setup" class="rounded-2xl shadow-2xl object-cover h-full w-full max-h-[400px]">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+        <h2 class="text-2xl font-bold text-darkText mb-8">حوس في الأقسام</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+            <div class="bg-white p-4 rounded-2xl shadow-soft text-center cursor-pointer hover:-translate-y-1 smooth-hover group border border-gray-100">
+                <div class="bg-gray-50 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/10 smooth-hover">
+                    <i class="fa-solid fa-desktop text-2xl text-primary"></i>
+                </div>
+                <h3 class="font-medium text-sm text-gray-800">ميكروات</h3>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-soft text-center cursor-pointer hover:-translate-y-1 smooth-hover group border border-gray-100">
+                <div class="bg-gray-50 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/10 smooth-hover">
+                    <i class="fa-solid fa-laptop text-2xl text-primary"></i>
+                </div>
+                <h3 class="font-medium text-sm text-gray-800">ليبورتابل</h3>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-soft text-center cursor-pointer hover:-translate-y-1 smooth-hover group border border-gray-100">
+                <div class="bg-gray-50 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/10 smooth-hover">
+                    <i class="fa-solid fa-memory text-2xl text-primary"></i>
+                </div>
+                <h3 class="font-medium text-sm text-gray-800">بياس بيسي</h3>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-soft text-center cursor-pointer hover:-translate-y-1 smooth-hover group border border-gray-100">
+                <div class="bg-gray-50 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/10 smooth-hover">
+                    <i class="fa-solid fa-tv text-2xl text-primary"></i>
+                </div>
+                <h3 class="font-medium text-sm text-gray-800">لي زيكرو</h3>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-soft text-center cursor-pointer hover:-translate-y-1 smooth-hover group border border-gray-100">
+                <div class="bg-gray-50 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/10 smooth-hover">
+                    <i class="fa-solid fa-gamepad text-2xl text-primary"></i>
+                </div>
+                <h3 class="font-medium text-sm text-gray-800">لي كونسول</h3>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-soft text-center cursor-pointer hover:-translate-y-1 smooth-hover group border border-gray-100">
+                <div class="bg-gray-50 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/10 smooth-hover">
+                    <i class="fa-solid fa-compact-disc text-2xl text-primary"></i>
+                </div>
+                <h3 class="font-medium text-sm text-gray-800">لي جو</h3>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-soft text-center cursor-pointer hover:-translate-y-1 smooth-hover group border border-gray-100">
+                <div class="bg-gray-50 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/10 smooth-hover">
+                    <i class="fa-solid fa-headphones text-2xl text-primary"></i>
+                </div>
+                <h3 class="font-medium text-sm text-gray-800">أكسيسوارات</h3>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-soft text-center cursor-pointer hover:-translate-y-1 smooth-hover group border border-gray-100">
+                <div class="bg-gray-50 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/10 smooth-hover">
+                    <i class="fa-solid fa-wrench text-2xl text-primary"></i>
+                </div>
+                <h3 class="font-medium text-sm text-gray-800">ريباراسيون</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Deals (Limited Time) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+        <div class="flex justify-between items-end mb-6">
+            <div>
+                <h2 class="text-2xl font-bold text-darkText flex items-center"><i class="fa-solid fa-fire text-accent me-2"></i>همزات اليوم</h2>
+                <p class="text-gray-500 text-sm mt-1">عروض تخلص عن قريب: <span id="countdown" class="font-bold text-primary ms-1" dir="ltr">12h 45m 30s</span></p>
+            </div>
+            <a href="#" class="text-primary font-medium hover:underline">شوف كلش</a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Product Card 1 -->
+            <div class="bg-white rounded-2xl shadow-soft overflow-hidden group border border-gray-100 relative">
+                <button class="absolute top-3 end-3 text-gray-400 hover:text-red-500 smooth-hover z-10 bg-white rounded-full p-2 shadow-sm"><i class="fa-solid fa-heart"></i></button>
+                <div class="h-48 bg-gray-100 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="PS5" class="w-full h-full object-cover group-hover:scale-105 smooth-hover">
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs font-medium bg-blue-100 text-blue-800 px-2 py-1 rounded">مستعمل - كالجديد</span>
+                        <div class="flex items-center text-xs text-gray-500" dir="ltr">4.9 <i class="fa-solid fa-star text-yellow-400 ms-1"></i></div>
+                    </div>
+                    <h3 class="font-semibold text-darkText truncate">بلايستيشن 5 - PlayStation 5</h3>
+                    <div class="mt-2 flex items-center">
+                        <span class="text-lg font-bold text-primary" dir="ltr">85,000 دج</span>
+                    </div>
+                    <div class="mt-3 pt-3 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+                        <span><i class="fa-solid fa-location-dot me-1"></i> دالي ابراهيم، العاصمة</span>
+                        <span class="font-medium text-secondary">بائع موثوق</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="bg-white rounded-2xl shadow-soft overflow-hidden group border border-gray-100 relative">
+                <button class="absolute top-3 end-3 text-gray-400 hover:text-red-500 smooth-hover z-10 bg-white rounded-full p-2 shadow-sm"><i class="fa-solid fa-heart"></i></button>
+                <div class="h-48 bg-gray-100 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="GPU" class="w-full h-full object-cover group-hover:scale-105 smooth-hover">
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs font-medium bg-green-100 text-green-800 px-2 py-1 rounded">جديد في البواطة</span>
+                        <div class="flex items-center text-xs text-gray-500" dir="ltr">5.0 <i class="fa-solid fa-star text-yellow-400 ms-1"></i></div>
+                    </div>
+                    <h3 class="font-semibold text-darkText truncate">كارت شاشة RTX 4080 Super</h3>
+                    <div class="mt-2 flex items-center">
+                        <span class="text-lg font-bold text-primary" dir="ltr">225,000 دج</span>
+                    </div>
+                    <div class="mt-3 pt-3 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+                        <span><i class="fa-solid fa-location-dot me-1"></i> وهران</span>
+                        <span class="font-medium text-secondary">بائع موثوق</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="bg-white rounded-2xl shadow-soft overflow-hidden group border border-gray-100 relative">
+                <div class="absolute top-3 start-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded" dir="ltr">-15%</div>
+                <button class="absolute top-3 end-3 text-gray-400 hover:text-red-500 smooth-hover z-10 bg-white rounded-full p-2 shadow-sm"><i class="fa-solid fa-heart"></i></button>
+                <div class="h-48 bg-gray-100 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1593642702821-c823b2816291?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Laptop" class="w-full h-full object-cover group-hover:scale-105 smooth-hover">
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs font-medium bg-blue-100 text-blue-800 px-2 py-1 rounded">روكونديسيوني (Refurbished)</span>
+                        <div class="flex items-center text-xs text-gray-500" dir="ltr">4.8 <i class="fa-solid fa-star text-yellow-400 ms-1"></i></div>
+                    </div>
+                    <h3 class="font-semibold text-darkText truncate">لابتوب Dell XPS 15 9510</h3>
+                    <div class="mt-2 flex items-center">
+                        <span class="text-lg font-bold text-primary" dir="ltr">165,000 دج</span>
+                        <span class="text-sm text-gray-400 line-through me-2" dir="ltr">195,000 دج</span>
+                    </div>
+                    <div class="mt-3 pt-3 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+                        <span><i class="fa-solid fa-location-dot me-1"></i> قسنطينة</span>
+                        <span class="font-medium text-secondary">بائع موثوق</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="bg-white rounded-2xl shadow-soft overflow-hidden group border border-gray-100 relative">
+                <button class="absolute top-3 end-3 text-gray-400 hover:text-red-500 smooth-hover z-10 bg-white rounded-full p-2 shadow-sm"><i class="fa-solid fa-heart"></i></button>
+                <div class="h-48 bg-gray-100 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1618422119571-a667ce181775?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Keyboard" class="w-full h-full object-cover group-hover:scale-105 smooth-hover">
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs font-medium bg-gray-100 text-gray-800 px-2 py-1 rounded">مستعمل - مليح</span>
+                        <div class="flex items-center text-xs text-gray-500" dir="ltr">4.5 <i class="fa-solid fa-star text-yellow-400 ms-1"></i></div>
+                    </div>
+                    <h3 class="font-semibold text-darkText truncate">كلافيي ميكانيك Custom</h3>
+                    <div class="mt-2 flex items-center">
+                        <span class="text-lg font-bold text-primary" dir="ltr">18,500 دج</span>
+                    </div>
+                    <div class="mt-3 pt-3 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+                        <span><i class="fa-solid fa-location-dot me-1"></i> عنابة</span>
+                        <span class="font-medium text-secondary">بائع موثوق</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-8">
+        <h2 class="text-2xl font-bold text-darkText mb-6">الخدمات الاحترافية</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-soft hover:border-secondary smooth-hover group flex items-start">
+                <div class="bg-blue-50 text-primary rounded-xl p-4 ms-5 group-hover:bg-primary group-hover:text-white smooth-hover">
+                    <i class="fa-solid fa-screwdriver-wrench text-2xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-1 text-darkText">مونطاج بيسي (Custom Builds)</h3>
+                    <p class="text-gray-500 text-sm mb-3">تركيب احترافي، ترتيب الخيوط (Cable Management)، وتيست باش يخرج البيسي على حساب البيدجي تاعك.</p>
+                    <a href="#" class="text-secondary font-medium text-sm hover:text-primary">حوس على تقني <i class="fa-solid fa-arrow-left ms-1"></i></a>
+                </div>
+            </div>
+            <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-soft hover:border-secondary smooth-hover group flex items-start">
+                <div class="bg-blue-50 text-primary rounded-xl p-4 ms-5 group-hover:bg-primary group-hover:text-white smooth-hover">
+                    <i class="fa-solid fa-gamepad text-2xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-1 text-darkText">ريباراسيون لي كونسول</h3>
+                    <p class="text-gray-500 text-sm mb-3">تصليح مشاكل السخانة، منافذ HDMI، ولا مشاكل القارئ تاع البلايستيشن والإكس بوكس.</p>
+                    <a href="#" class="text-secondary font-medium text-sm hover:text-primary">حوس على مصلح <i class="fa-solid fa-arrow-left ms-1"></i></a>
+                </div>
+            </div>
+            <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-soft hover:border-secondary smooth-hover group flex items-start">
+                <div class="bg-blue-50 text-primary rounded-xl p-4 ms-5 group-hover:bg-primary group-hover:text-white smooth-hover">
+                    <i class="fa-solid fa-download text-2xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-1 text-darkText">سوفتوير وأنظمة</h3>
+                    <p class="text-gray-500 text-sm mb-3">فورماطاج، انسطالاسيون تاع Windows، تنظيف الفيروسات، وتحديث لي درايفر.</p>
+                    <a href="#" class="text-secondary font-medium text-sm hover:text-primary">اطلب خدمة <i class="fa-solid fa-arrow-left ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="bg-white mt-16 py-16 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-darkText mb-4">علاش تخير بيع واشري؟</h2>
+                <p class="text-gray-500">وفرنالك منصة آمنة، خفيفة، ومخدومة سبيسيال للناس لي تحب التكنولوجيا ولي جو في الدزاير.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="h-16 w-16 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">حماية المشتري</h4>
+                    <p class="text-gray-500 text-sm">ضمانات على التعاملات باش تشري وأنت مهني.</p>
+                </div>
+                <div>
+                    <div class="h-16 w-16 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-user-check text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">بائعين موثوقين</h4>
+                    <p class="text-gray-500 text-sm">نتحققو من هوية البائعين باش نبنيو مجتمع آمن.</p>
+                </div>
+                <div>
+                    <div class="h-16 w-16 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-bolt text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">روشيرش خفيفة</h4>
+                    <p class="text-gray-500 text-sm">فيلتر متطور يعاونك تلقى البياس لي راك تحوس عليها بالخف.</p>
+                </div>
+                <div>
+                    <div class="h-16 w-16 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-map-location-dot text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">بيع وشرا لوكال (Local)</h4>
+                    <p class="text-gray-500 text-sm">تلاقى بالشاري وجه لوجه في ولايتك ولا ابعثلو مع شركة التوصيل.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex-shrink-0 flex items-center mb-4">
+                        <span class="text-2xl text-white font-bold"><i class="fa-solid fa-microchip me-2 text-primary"></i>بيع<span class="text-accent">و</span>اشري</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">المارشي رقم واحد للبيع، الشرا وتصليح الماتريال تاع التكنولوجيا في الدزاير.</p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fa-brands fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fa-brands fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fa-brands fa-discord text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">السوق</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-primary">كل الأقسام</a></li>
+                        <li><a href="#" class="hover:text-primary">الخدمات</a></li>
+                        <li><a href="#" class="hover:text-primary">كيفاش نبيع؟</a></li>
+                        <li><a href="#" class="hover:text-primary">حماية المشتري</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">المساعدة</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-primary">مركز المساعدة</a></li>
+                        <li><a href="#" class="hover:text-primary">اتصل بينا</a></li>
+                        <li><a href="#" class="hover:text-primary">شروط الاستخدام</a></li>
+                        <li><a href="#" class="hover:text-primary">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">ابقى على علم</h4>
+                    <p class="text-sm text-gray-400 mb-4">سجل في النشرة تاعنا باش يوصلوك آخر العروض (Les offres).</p>
+                    <div class="flex">
+                        <input type="email" placeholder="الإيميل تاعك" class="bg-gray-800 text-white px-4 py-2 rounded-s-md w-full focus:outline-none focus:ring-1 focus:ring-primary border-none text-right">
+                        <button class="bg-primary hover:bg-blue-600 px-4 py-2 rounded-e-md text-white font-medium smooth-hover">اشتراك</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2026 بيع واشري. جميع الحقوق محفوظة.</p>
+                <div class="mt-4 md:mt-0 flex items-center space-x-2 space-x-reverse">
+                    <i class="fa-brands fa-cc-visa text-2xl"></i>
+                    <i class="fa-brands fa-cc-mastercard text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple JS for Countdown Timer -->
+    <script>
+        function startTimer(duration, display) {
+            let timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = hours + "h " + minutes + "m " + seconds + "s";
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            let twelveHours = 60 * 60 * 12;
+            let display = document.querySelector('#countdown');
+            if(display) startTimer(twelveHours, display);
+        };
+    </script>
+</body>
+</html>
